@@ -1,5 +1,5 @@
 // Place all the styles related to the Store controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* START_HIGHLIGHT */
@@ -23,7 +23,7 @@
       width: 80px;
       margin-right: 5px;
       margin-bottom: 5px;
-      position: absolute;
+      position: left;
     }
 
     h3 {
