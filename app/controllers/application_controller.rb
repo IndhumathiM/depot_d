@@ -10,25 +10,4 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_filter :cookie
-
-  def cookie
-
-    if !(cookies.permanent[:depot_timer].blank?)
-      oldTime=cookies.permanent[:depot_timer]
-    else
-      oldTime=0
-    end
-
-    mydate = Time.at(oldTime.to_i)
-
-    if ((Time.now-mydate) < 110000000000) then
-      @lastVisited=oldTime
-    else
-      @lastVisited="Long Back"
-    end
-
-
-    cookies.permanent[:depot_timer]=Time.now
-  end
 end
