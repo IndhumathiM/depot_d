@@ -8,6 +8,6 @@
 #---
 class StoreController < ApplicationController
   def index
-    @products = Product.order(:title)
+    @products = Product.order(:title).where.not("StoreQuantity=0 AND OnlineQuantity=0")
   end
 end

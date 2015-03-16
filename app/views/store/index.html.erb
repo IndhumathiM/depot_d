@@ -12,5 +12,11 @@
     <div class="price_line">
       <span class="price"><%= number_to_currency(product.price,options={unit:"USD",format:"%n %u"})%></span>
     </div>
+    <% if(product.onlineQuantity==0)%>
+      <b>Available In Store Only</b>
+        <%end%>
+    <% if(product.storeQuantity==0)%>
+        <b>Available In Online Only</b>
+    <%end%>
   </div>
 <% end %>
