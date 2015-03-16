@@ -49,3 +49,11 @@ Product.create!(title: 'Rails Test Prescriptions',
   price: 34.95,
   onlineQuantity: 5,
   storeQuantity: 8)
+#...
+Product.create!(title: 'Operating System',
+                description:
+                    %{ Describes about the internal systems },
+                image_url: 'rtp.jpg',
+                price: 14.95,
+                onlineQuantity: 0,
+                storeQuantity: 0)
